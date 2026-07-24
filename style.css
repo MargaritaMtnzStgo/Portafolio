@@ -1,0 +1,336 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   VARIABLES
+========================== */
+
+:root{
+    --background: #0d0d0d;
+    --background2: #181818;
+    --text: #ffffff;
+    --primary: #5FB0C9;
+    --primary-hover: #3E6D9C;
+    --gray: #b8b8b8;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,.95);
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav h2{
+    color: var(--primary);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover{
+    color: var(--primary);
+}
+
+/* ==========================
+   SECCIONES
+========================== */
+
+section{
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px 20px;
+}
+
+section h2{
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ==========================
+   HOME
+========================== */
+
+#home{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+#home div{
+    flex: 1;
+}
+
+#home h1{
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+#home h2{
+    text-align: left;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+#home p{
+    color: var(--gray);
+    margin-bottom: 35px;
+}
+
+#home img{
+    width: 100%;
+    max-width: 380px;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    display: block;
+    margin: auto;
+}
+
+/* ==========================
+   BOTONES
+========================== */
+
+a{
+    text-decoration: none;
+}
+
+#home a{
+    display: inline-block;
+    margin-right: 15px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+    transition: .3s;
+}
+
+#home a:hover{
+    background: var(--primary-hover);
+}
+
+/* ==========================
+   SOBRE MI
+========================== */
+
+#about p{
+    max-width: 800px;
+    margin: auto;
+    text-align: justified;
+    color: var(--gray);
+    font-size: 1.1rem;
+}
+
+/* ==========================
+   HABILIDADES
+========================== */
+
+#skills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+}
+
+#skills h2{
+    grid-column: 1/-1;
+}
+
+#skills div{
+    background: var(--background2);
+    padding: 30px;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+#skills div:hover{
+    transform: translateY(-10px);
+}
+
+#skills h3{
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+#skills ul{
+    list-style: none;
+}
+
+#skills li{
+    margin-bottom: 10px;
+}
+
+/* ==========================
+   PROYECTOS
+========================== */
+
+#projects article{
+    background: var(--background2);
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 380px;
+    margin: auto;
+}
+
+#projects img{
+    width: 100%;
+}
+
+#projects h3{
+    margin: 20px;
+}
+
+#projects p{
+    margin: 20px;
+    color: var(--gray);
+}
+
+#projects a{
+    display: inline-block;
+    margin: 0 20px 20px;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border-radius: 6px;
+}
+
+#projects a:hover{
+    background: var(--primary-hover);
+}
+
+/* ==========================
+   CONTACTO
+========================== */
+
+form{
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input,
+textarea{
+    background: #222;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+textarea{
+    min-height: 180px;
+    resize: none;
+}
+
+button{
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+button:hover{
+    background: var(--primary-hover);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    text-align: center;
+    padding: 30px;
+    background: black;
+    border-top: 1px solid #222;
+    color: var(--gray);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 150px;
+    }
+
+    #home h2{
+        text-align: center;
+    }
+
+    #home img{
+        max-width: 250px;
+    }
+
+    #home h1{
+        font-size: 2.5rem;
+    }
+
+}
