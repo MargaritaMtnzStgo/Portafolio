@@ -73,7 +73,7 @@ form.addEventListener("submit", function (e) {
         return;
     }
 
-    alert("¡Gracias por tu mensaje! Te responderé pronto.");
+    alert("¡Gracias por tu mensaje! Te responderé lo antes posible.");
 
     form.reset();
 
@@ -107,3 +107,26 @@ sections.forEach(section => {
     observer.observe(section);
 
 });
+
+const blog = document.querySelector("#blog");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+},{
+
+    threshold:0.3
+
+});
+
+blog.classList.add("hidden");
+observer.observe(blog);

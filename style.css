@@ -211,12 +211,42 @@ a{
    PROYECTOS
 ========================== */
 
+/* CONTENEDOR DE PROYECTOS */
+
+.projects-container{
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 30px;
+
+    margin-top: 40px;
+
+}
+
 #projects article{
+
     background: var(--background2);
+
     border-radius: 15px;
+
     overflow: hidden;
+
+    width: 100%;
+
     max-width: 380px;
-    margin: auto;
+
+    margin: 0 auto;
+
+    transition: .3s;
+
+}
+
+#projects article:hover{
+
+    transform: translateY(-10px);
+
 }
 
 #projects img{
@@ -245,6 +275,73 @@ a{
     background: var(--primary-hover);
 }
 
+
+
+/* ==========================
+   BLOG
+========================== */
+
+#blog{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.blog-content{
+    max-width: 800px;
+}
+
+#blog h2{
+
+    font-size: 3rem;
+    color: #ffff;
+    margin-bottom: 25px;
+    position: relative;
+
+}
+
+/* Línea decorativa debajo del título */
+
+#blog h2::after{
+
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background: #3E6D9C;
+    margin: 15px auto;
+    border-radius: 20px;
+
+}
+
+.blog-intro{
+
+    color: #d1d1d1;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+
+}
+
+#blog h2{
+
+    transition: .4s;
+
+}
+
+#blog h2:hover{
+
+    text-shadow:
+        0 0 10px #4f9cff,
+        0 0 20px #4f9cff,
+        0 0 40px #4f9cff;
+
+}
+
+
 /* ==========================
    CONTACTO
 ========================== */
@@ -270,6 +367,11 @@ textarea{
 textarea{
     min-height: 180px;
     resize: none;
+}
+
+textarea {
+    font-family: inherit;
+    font-size: inherit;
 }
 
 button{
